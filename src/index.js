@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Auth0Provider
+     domain="https://dev-bbnxpo4o.us.auth0.com"
+     clientId="drWkUAB9XLwuRK20Q8nukMLgrdv4EfmI"
+     redirectUri="http://localhost:3001/mydash"
+  >
+        <App />
+  </Auth0Provider>
   </React.StrictMode>
 );
 
